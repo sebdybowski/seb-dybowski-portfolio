@@ -8,6 +8,4 @@ export const TEXT ={
   DARK: '#E5E5E5',
 };
 
-export const BRAND_MAIN = '';
-export const SECONDARY_LIGHT = '';
-export const SECONDARY_MEDIUM = '';
+export const BRAND = '#E52B50';

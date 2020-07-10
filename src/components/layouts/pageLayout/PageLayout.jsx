@@ -1,13 +1,14 @@
-// @flow
 import React from 'react';
-import type { Node } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Header } from '../header/Header';
 import { Footer } from '../footer/Footer';
 import { BACKGROUND, TEXT } from '../../../styles';
+import Normalize from 'normalize.css';
 import Comfortaa from '../../../fonts/comfortaa/Comfortaa-VariableFont_wght.ttf';
 
 const GlobalStyle = createGlobalStyle`
+  @import ${Normalize};
+
   @font-face {
     font-family: 'Comfortaa';
     src: url(${Comfortaa}) format('truetype');
@@ -20,17 +21,20 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${BACKGROUND.DARK};
     color: ${TEXT.LIGHT};
     font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
     font-weight: 400;
+    padding: 2vh 0;
   }
 `;
 
-type Props = {
-  children: Node
-};
+const PageLayoutStyled = styled.div`
+  width: 60vw;
+  margin: 0 auto;
+`;
 
-export const PageLayout = ({ children }: Props): Node => <>
+export const PageLayout = ({ children }) => <PageLayoutStyled>
   <GlobalStyle/>
   <Header/>
   <main>{children}</main>
   <Footer/>
-</>;
+</PageLayoutStyled>;
