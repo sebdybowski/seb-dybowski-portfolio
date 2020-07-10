@@ -15,9 +15,9 @@
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
-    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
@@ -25,10 +25,11 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.10.4",
+    "babel-plugin-styled-components": "^1.10.7",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.0",
-    "flow-bin": "^0.129.0",
-    "prettier": "2.0.5"
+    "flow-bin": "^0.129.0"
   },
   "keywords": [
     "gatsby"
