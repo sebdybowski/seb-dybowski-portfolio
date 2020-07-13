@@ -30,6 +30,6 @@ const FieldsetStyled = styled.fieldset`
 `;
 
 export const TextInput = () => <FieldsetStyled>
-  <LabelStyled>Test</LabelStyled>
-  <InputStyled type="text" placeholder="type here..." />
+  <LabelStyled>Email address</LabelStyled>
+  <InputStyled type="email" placeholder="type here..." />
 </FieldsetStyled>;
