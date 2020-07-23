@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-weight: 400;
     padding: 2vh 0;
+    min-height: 100vh;
   }
 `;
 
