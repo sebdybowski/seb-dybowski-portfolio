@@ -18,7 +18,7 @@ const InputStyled = styled.input`
   background-color: transparent;
   padding: 0 32px;
   box-sizing: border-box;
-  transition: border-color ease-out 0.2s;
+  transition: border-color ease-out 0.4s;
   :focus {
     outline: none;
     border-color: ${BRAND};
