@@ -1,10 +1,10 @@
 export const TYPOGRAPHY = {
   SIZE: {
-    XS: '12px',
-    SM: '16px',
-    MD: '24px',
-    LG: '32px',
-    XL: '48px',
+    XS: 'calc(12px + 0.5vw)',
+    SM: 'calc(16px + 0.5vw)',
+    MD: 'calc(24px + 0.5vw)',
+    LG: 'calc(32px + 0.5vw)',
+    XL: 'calc(48px + 0.5vw)',
   },
   WEIGHT: {
     XS: '300',

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledSectionLayout = styled.section`
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;

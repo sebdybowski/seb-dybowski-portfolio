@@ -5,12 +5,27 @@ import { Portrait } from './Portrait';
 import { SPACING, TEXT } from '../../styles';
 
 export const About = () => <SectionLayout>
-  <div style={{ display: 'flex-inline', boxSizing: 'border-box', border: `6px solid ${TEXT.LIGHT}`, borderRadius: SPACING.LG, width: '100%', padding: '48px 64px', height: '522px' }}>
+  <div style={{
+    display: 'flex-inline',
+    boxSizing: 'border-box',
+    border: `6px solid ${TEXT.LIGHT}`,
+    borderRadius: SPACING.LG,
+    width: '100%',
+    padding: '48px 64px',
+    height: '512px',
+    position: 'relative'
+  }}>
     <div>
       <MainHeading>{'Hi, I’m Seb'}</MainHeading>
       <SubHeading>Nice to meet You!</SubHeading>
     </div>
-    <div style={{ maxWidth: '768px', marginBottom: '1.45rem', marginLeft: 'auto', position: 'relative', top: '-315px', right: '-40px' }}>
+    <div style={{
+      width: '768px',
+      marginLeft: 'auto',
+      position: 'absolute',
+      bottom: '0',
+      right: SPACING.MD
+    }}>
       <Portrait/>
     </div>
   </div>
