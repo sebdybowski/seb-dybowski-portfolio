@@ -31,6 +31,12 @@ const GlobalStyle = createGlobalStyle`
 const PageLayoutStyled = styled.div`
   width: 60vw;
   margin: 0 auto;
+  @media only screen and (max-width: 768px) {
+    width: 80vw;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1600px) {
+    width: 70vw;
+  }
 `;
 
 export const PageLayout = ({ children }) => <PageLayoutStyled>
