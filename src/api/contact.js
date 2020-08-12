@@ -1,8 +1,9 @@
+import { v4 } from 'uuid';
 import { fetcher, METHOD, URL } from './utils';
 
 const getFormData = (email, message) => ({
   action: 'grunion-contact-form',
-  'g23-name': 'sebdybowski.com',
+  'g23-name': `[sebdybowski.com]${v4()}`,
   'g23-email': email,
   'g23-message': message,
   'contact-form-id': 23,
@@ -28,5 +29,5 @@ export const sendContactForm = (email, message) => {
       'Content-Length': '<calculated when request is sent>'
     },
     body,
-  });
+  }).then(response => console.log(response));
 };
