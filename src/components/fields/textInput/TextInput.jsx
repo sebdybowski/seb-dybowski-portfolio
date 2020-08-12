@@ -31,7 +31,7 @@ const FieldsetStyled = styled.fieldset`
   display: flex;
 `;
 
-export const TextInput = () => <FieldsetStyled>
+export const TextInput = props => <FieldsetStyled>
   <LabelStyled>Email address</LabelStyled>
-  <InputStyled type="email" placeholder="type here..." />
+  <InputStyled type="email" placeholder="type here..." {...props} />
 </FieldsetStyled>;

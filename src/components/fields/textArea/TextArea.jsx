@@ -19,6 +19,7 @@ const TextAreaStyled = styled.textarea`
     padding: 24px 32px;
     line-height: 32px;
     box-sizing: border-box;
+    resize: none;
     :focus {
         outline: none;
         border-color: ${BRAND};
@@ -30,7 +31,7 @@ const FieldsetStyled = styled.fieldset`
     display: flex;
 `;
 
-export const TextArea = () => <FieldsetStyled>
+export const TextArea = props => <FieldsetStyled>
   <LabelStyled>Your message</LabelStyled>
-  <TextAreaStyled rows="3" placeholder="type here..." />
+  <TextAreaStyled rows="3" placeholder="type here..." maxlength={255} {...props}/>
 </FieldsetStyled>;
