@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "private": true,
   "description": "Personal portfolio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Seb Dybowski <dybowski@int.pl>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
