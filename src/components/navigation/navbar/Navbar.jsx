@@ -1,6 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NAVIGATION_LINKS } from './constants';
 import { TEXT, SPACING, BRAND } from '../../../styles';
 
@@ -63,10 +65,8 @@ export const Navbar = () => {
               dybowski.com
             </StyledLogo>
           </Link>
-          <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-            <span />
-            <span />
-            <span />
+          <div className="navbar-burger burger py-5" data-target="navbarExampleTransparentExample">
+            <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
         <div id="navbarExampleTransparentExample" className="navbar-menu">
