@@ -12,5 +12,5 @@ export const TYPOGRAPHY = {
     MD: '500',
     LG: '600',
     XL: '700',
-  }
+  },
 };

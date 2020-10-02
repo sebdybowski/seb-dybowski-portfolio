@@ -1,23 +1,23 @@
 import React from 'react';
-import { SectionLayout } from '../../components/layouts';
-import { MainHeading, SubHeading } from '../../components/typography';
-import { Typewriter } from '../../components/effects/typewriter/Typewriter';
-import { BRAND } from '../../styles';
 import styled from 'styled-components';
-
-const WelcomeStyled = styled.div`
-  text-align: center;
-`;
+import Typewriter from '../../components/effects/typewriter/Typewriter';
+import { BRAND } from '../../styles';
 
 const PrefixStyled = styled.span`
   color: ${BRAND}
 `;
 
-export const Welcome = () => <SectionLayout>
-  <WelcomeStyled>
-    <MainHeading>
-      <Typewriter prefix={<PrefixStyled>{'>_ '}</PrefixStyled>}>{'Hello, world!'}</Typewriter>
-    </MainHeading>
-    <SubHeading>Welcome on my Page!</SubHeading>
-  </WelcomeStyled>
-</SectionLayout>;
+export const Welcome = () => (
+  <section className="hero is-transparent is-large">
+    <div className="hero-body">
+      <div className="container has-text-centered">
+        <h1 className="title is-size-1">
+          <Typewriter prefix={<PrefixStyled>{'>_ '}</PrefixStyled>}>Hello, world!</Typewriter>
+        </h1>
+        <h2 className="subtitle is-size-4">
+          Welcome on my Page!
+        </h2>
+      </div>
+    </div>
+  </section>
+);

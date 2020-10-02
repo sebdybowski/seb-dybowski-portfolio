@@ -1,0 +1,10 @@
+@import "./../../node_modules/normalize.css/normalize.css";
+
+$primary: #E52B50;
+$text: #F2F2F2;
+$text-strong: #F2F2F2;
+$input-background-color: transparent;
+$footer-background-color: transparent;
+$navbar-background-color: transparent;
+
+@import "~bulma/bulma.sass";

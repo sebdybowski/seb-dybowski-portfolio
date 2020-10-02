@@ -1,8 +1,8 @@
 export const METHOD = {
   POST: 'POST',
-  GET: 'GET'
+  GET: 'GET',
 };
 
 export const URL = {
-  CONTACT: 'http://api.sebdybowski.com/contact-form/'
+  CONTACT: 'http://api.sebdybowski.com/contact-form/',
 };

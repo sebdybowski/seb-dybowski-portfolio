@@ -19,4 +19,8 @@ module.exports = {
   plugins: [
     'react',
   ],
+  rules: {
+    'linebreak-style': ['error', 'windows'],
+    'import/prefer-default-export': 0,
+  },
 };

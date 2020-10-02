@@ -3,7 +3,7 @@ export const BACKGROUND = {
   DARK: '#222',
 };
 
-export const TEXT ={
+export const TEXT = {
   LIGHT: '#F2F2F2',
   DARK: '#E5E5E5',
 };

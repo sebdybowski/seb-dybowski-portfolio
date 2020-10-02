@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Header } from '../header/Header';
+import Normalize from 'normalize.css';
 import { Footer } from '../footer/Footer';
 import { BACKGROUND, TEXT } from '../../../styles';
-import Normalize from 'normalize.css';
 import Comfortaa from '../../../fonts/comfortaa/Comfortaa-VariableFont_wght.ttf';
+import { Navbar } from '../../navigation';
 
 const GlobalStyle = createGlobalStyle`
   @import ${Normalize};
@@ -39,9 +39,11 @@ const PageLayoutStyled = styled.div`
   }
 `;
 
-export const PageLayout = ({ children }) => <PageLayoutStyled>
-  <GlobalStyle/>
-  <Header/>
-  <main>{children}</main>
-  <Footer/>
-</PageLayoutStyled>;
+export const PageLayout = ({ children }) => (
+  <PageLayoutStyled>
+    <GlobalStyle />
+    <Navbar />
+    <main>{children}</main>
+    <Footer />
+  </PageLayoutStyled>
+);

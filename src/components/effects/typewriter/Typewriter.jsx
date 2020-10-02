@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Chance from 'chance';
+import { propTypes, defaultProps } from './propTypes';
 
 const chanceApi = new Chance();
 
-const BASE_TYPE_INTERVAL = 200;
+const BASE_TYPE_INTERVAL = 150;
 
-const TypewriterStyled = styled.span``;
+const TypewriterStyled = styled.div``;
 
-const CaretStyled = styled.span`
+const CaretStyled = styled.div`
   position: absolute;
-  height: calc(48px + 0.5vw);
+  display: inline-block;
+  height: 3rem;
   width: calc(4px + 0.1vw);
-   animation: blinkTextCursor 500ms steps(24) infinite normal;
-   border-right: calc(4px + 0.1vw) solid rgba(255,255,255,.75);
-
-   @keyframes blinkTextCursor{
-     from{border-right-color: rgba(255,255,255,.75);}
-     to{border-right-color: transparent;}
-   }
+  animation: blinkTextCursor 500ms steps(24) infinite normal;
+  border-right: calc(4px + 0.1vw) solid rgba(255, 255, 255, .75);
+  
+  @keyframes blinkTextCursor{
+   from{ border-right-color: rgba(255, 255, 255, .75); }
+   to{ border-right-color: transparent; }
+  }
 `;
 
-export const Typewriter = (props) => {
+const Typewriter = (props) => {
   const { prefix, children } = props;
 
   const [index, setIndex] = useState(0);
@@ -47,3 +49,8 @@ export const Typewriter = (props) => {
     </TypewriterStyled>
   );
 };
+
+Typewriter.propTypes = propTypes;
+Typewriter.defaultProps = defaultProps;
+
+export default Typewriter;

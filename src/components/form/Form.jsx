@@ -6,6 +6,8 @@ const FormStyled = styled.form`
     flex-direction: column;
 `;
 
-export const Form = ({ children }) => <FormStyled>
-  {children}
-</FormStyled>;
+export const Form = ({ children }) => (
+  <FormStyled>
+    {children}
+  </FormStyled>
+);

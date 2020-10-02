@@ -1,2 +1,1 @@
-export const getCurrentYear = () =>
-  new Date().getFullYear().toString();
+export const getCurrentYear = () => new Date().getFullYear().toString();
