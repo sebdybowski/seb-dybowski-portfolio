@@ -20,7 +20,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 0,
     'import/prefer-default-export': 0,
   },
 };
