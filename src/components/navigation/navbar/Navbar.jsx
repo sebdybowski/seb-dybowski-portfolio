@@ -5,38 +5,38 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NAVIGATION_LINKS } from './constants';
 import { TEXT, SPACING, BRAND } from '../../../styles';
 
-const Link = `
-  padding: ${SPACING.MD};
-  color: ${TEXT.DARK};
-  text-decoration: none;
-  :hover {
-    cursor: pointer;
-    color: ${TEXT.LIGHT};
-  }
-  :last-child {
-    padding-right: 0;
-  }
-`;
+// const Link = `
+//   padding: ${SPACING.MD};
+//   color: ${TEXT.DARK};
+//   text-decoration: none;
+//   :hover {
+//     cursor: pointer;
+//     color: ${TEXT.LIGHT};
+//   }
+//   :last-child {
+//     padding-right: 0;
+//   }
+// `;
 
-const Navbar = nav`
-  display: flex;
-  margin-left: auto;
-  @media only screen and (max-width: 1600px) {
-    visibility:  ${(props) => (props.isOpen ? 'visible' : 'hidden')};
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1024;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-`;
+// const Navbar = nav`
+//   display: flex;
+//   margin-left: auto;
+//   @media only screen and (max-width: 1600px) {
+//     visibility:  ${(props) => (props.isOpen ? 'visible' : 'hidden')};
+//     background: rgba(0, 0, 0, 0.9);
+//     z-index: 1024;
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// `;
 
-const Button = button`
+const Button = `
   display: none;
   @media only screen and (max-width: 1600px) {
     display: flex;
@@ -44,13 +44,13 @@ const Button = button`
   }
 `;
 
-const Logo = span`
-            padding: ${SPACING.MD} 0;
-            `;
+const Logo = `
+  padding: ${SPACING.MD} 0;
+`;
 
-const Brand = span`
-            color: ${BRAND};
-            `;
+const Brand = `
+  color: ${BRAND};
+`;
 
 export const Navbar = () => {
   const [isOpen, toggle] = useState(false);
