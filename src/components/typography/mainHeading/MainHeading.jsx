@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+
 import { TYPOGRAPHY } from '../../../styles';
 
 const MainHeadingStyled = styled.h1`

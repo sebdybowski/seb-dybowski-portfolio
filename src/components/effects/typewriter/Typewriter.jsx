@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import Chance from 'chance';
 import { propTypes, defaultProps } from './propTypes';
 
@@ -7,9 +6,7 @@ const chanceApi = new Chance();
 
 const BASE_TYPE_INTERVAL = 150;
 
-const TypewriterStyled = styled.div``;
-
-const CaretStyled = styled.div`
+const CaretStyled = `
   position: absolute;
   display: inline-block;
   height: 3rem;
@@ -42,11 +39,11 @@ const Typewriter = (props) => {
   });
 
   return (
-    <TypewriterStyled>
+    <span>
       {prefix}
       {dynamicText}
       <CaretStyled />
-    </TypewriterStyled>
+    </span>
   );
 };
 
