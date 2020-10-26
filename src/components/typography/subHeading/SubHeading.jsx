@@ -2,9 +2,9 @@ import React from 'react';
 
 import { TYPOGRAPHY } from '../../../styles';
 
-const SubHeadingStyled = styled.h1`
+const SubHeading = `
   font-size: ${TYPOGRAPHY.SIZE.LG};
   font-weight: ${TYPOGRAPHY.WEIGHT.XS};
 `;
 
-export const SubHeading = ({ children }) => <SubHeadingStyled>{children}</SubHeadingStyled>;
+export const SubHeading = ({ children }) => <h1>{children}</h1>;

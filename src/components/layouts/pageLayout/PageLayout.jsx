@@ -1,5 +1,4 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
 import Normalize from 'normalize.css';
 import { Footer } from '../footer/Footer';
 import { BACKGROUND, TEXT } from '../../../styles';
@@ -28,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const PageLayoutStyled = styled.div`
+const PageLayout = `
   width: 60vw;
   margin: 0 auto;
   @media only screen and (max-width: 768px) {
@@ -40,10 +39,10 @@ const PageLayoutStyled = styled.div`
 `;
 
 export const PageLayout = ({ children }) => (
-  <PageLayoutStyled>
+  <div>
     <GlobalStyle />
     <Navbar />
     <main>{children}</main>
     <Footer />
-  </PageLayoutStyled>
+  </div>
 );

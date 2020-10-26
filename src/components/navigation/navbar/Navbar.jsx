@@ -1,12 +1,11 @@
-import React, { useState, Fragment } from 'react';
-
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NAVIGATION_LINKS } from './constants';
 import { TEXT, SPACING, BRAND } from '../../../styles';
 
-const StyledLink = styled(Link)`
+const Link = `
   padding: ${SPACING.MD};
   color: ${TEXT.DARK};
   text-decoration: none;
@@ -19,7 +18,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledNavbar = styled.nav`
+const Navbar = nav`
   display: flex;
   margin-left: auto;
   @media only screen and (max-width: 1600px) {
@@ -37,7 +36,7 @@ const StyledNavbar = styled.nav`
   }
 `;
 
-const StyledButton = styled.button`
+const Button = button`
   display: none;
   @media only screen and (max-width: 1600px) {
     display: flex;
@@ -45,11 +44,11 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledLogo = styled.span`
+const Logo = span`
             padding: ${SPACING.MD} 0;
             `;
 
-const StyledBrand = styled.span`
+const Brand = span`
             color: ${BRAND};
             `;
 
@@ -60,10 +59,10 @@ export const Navbar = () => {
       <nav className="navbar is-transparent is-size-3">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <StyledLogo>
-              <StyledBrand>:// seb</StyledBrand>
+            <span>
+              <span>:// seb</span>
               dybowski.com
-            </StyledLogo>
+            </span>
           </Link>
           <div className="navbar-burger burger py-5" data-target="navbarExampleTransparentExample">
             <FontAwesomeIcon icon={faBars} />
@@ -77,13 +76,6 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* <StyledButton onClick={() => toggle(!isOpen)}>open</StyledButton> */}
-      {/* <StyledNavbar isOpen={isOpen}> */}
-      {/*  <StyledButton onClick={() => toggle(!isOpen)}>close</StyledButton> */}
-      {/*  { NAVIGATION_LINKS.map( */}
-      {/*    ({ ORDER, PATH, LABEL }) => <StyledLink key={ORDER} to={PATH}>{LABEL}</StyledLink>, */}
-      {/*  )} */}
-      {/* </StyledNavbar> */}
     </>
   );
 };

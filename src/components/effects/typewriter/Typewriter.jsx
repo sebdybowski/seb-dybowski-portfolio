@@ -6,7 +6,7 @@ const chanceApi = new Chance();
 
 const BASE_TYPE_INTERVAL = 150;
 
-const CaretStyled = `
+const Caret = `
   position: absolute;
   display: inline-block;
   height: 3rem;
@@ -42,7 +42,7 @@ const Typewriter = (props) => {
     <span>
       {prefix}
       {dynamicText}
-      <CaretStyled />
+      <div className="caret" />
     </span>
   );
 };
