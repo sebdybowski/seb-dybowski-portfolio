@@ -1,12 +1,11 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
 import Normalize from 'normalize.css';
 import { Footer } from '../footer/Footer';
 import { BACKGROUND, TEXT } from '../../../styles';
 import Comfortaa from '../../../fonts/comfortaa/Comfortaa-VariableFont_wght.ttf';
 import { Navbar } from '../../navigation';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = `
   @import ${Normalize};
 
   @font-face {
@@ -28,22 +27,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const PageLayoutStyled = styled.div`
-  width: 60vw;
-  margin: 0 auto;
-  @media only screen and (max-width: 768px) {
-    width: 80vw;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1600px) {
-    width: 70vw;
-  }
-`;
+// const PageLayout = `
+//   width: 60vw;
+//   margin: 0 auto;
+//   @media only screen and (max-width: 768px) {
+//     width: 80vw;
+//   }
+//   @media only screen and (min-width: 769px) and (max-width: 1600px) {
+//     width: 70vw;
+//   }
+// `;
 
 export const PageLayout = ({ children }) => (
-  <PageLayoutStyled>
-    <GlobalStyle />
+  <div>
     <Navbar />
     <main>{children}</main>
     <Footer />
-  </PageLayoutStyled>
+  </div>
 );
