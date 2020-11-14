@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { TYPOGRAPHY } from '../../../styles';
-
 // const MainHeading = h1`
 //   font-size: ${TYPOGRAPHY.SIZE.XL};
 //   font-weight: ${TYPOGRAPHY.WEIGHT.LG};

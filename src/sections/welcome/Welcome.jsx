@@ -1,6 +1,5 @@
 import React from 'react';
 import Typewriter from '../../components/effects/typewriter/Typewriter';
-import { BRAND } from '../../styles';
 
 export const Welcome = () => (
   <section className="hero is-transparent is-large">

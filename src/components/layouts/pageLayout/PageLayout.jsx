@@ -1,7 +1,6 @@
 import React from 'react';
 import Normalize from 'normalize.css';
 import { Footer } from '../footer/Footer';
-import { BACKGROUND, TEXT } from '../../../styles';
 import Comfortaa from '../../../fonts/comfortaa/Comfortaa-VariableFont_wght.ttf';
 import { Navbar } from '../../navigation';
 
@@ -39,7 +38,7 @@ const GlobalStyle = `
 // `;
 
 export const PageLayout = ({ children }) => (
-  <div>
+  <div className="container">
     <Navbar />
     <main>{children}</main>
     <Footer />

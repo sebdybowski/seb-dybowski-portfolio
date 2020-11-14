@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NAVIGATION_LINKS } from './constants';
-import { TEXT, SPACING, BRAND } from '../../../styles';
 
 // const Link = `
 //   padding: ${SPACING.MD};
