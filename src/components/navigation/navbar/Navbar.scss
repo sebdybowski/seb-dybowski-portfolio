@@ -3,4 +3,9 @@
     background: none;
     border: none;
   }
+
+  &.is-blur {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
 }

@@ -20,16 +20,21 @@ export const Navbar = () => {
 
   console.log(scrollHeight, window.innerHeight);
 
+  const isScreenScrolled = scrollHeight >= viewportHeight;
+
   return (
-    <div className="container">
-      <nav
-        className={clsx(
-          'navbar',
-          'is-transparent',
-          'is-size-3',
-          scrollHeight >= viewportHeight && 'is-fixed-top',
-        )}
-      >
+    <nav
+      className={clsx(
+        'navbar',
+        'is-size-3',
+        !isScreenScrolled && 'is-transparent',
+        !isScreenScrolled && 'is-transparent',
+        isScreenScrolled && 'is-fixed-top',
+        isScreenScrolled && 'is-blur',
+        isScreenScrolled && 'animate__animated animate__slideInDown',
+      )}
+    >
+      <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <span>
@@ -59,7 +64,7 @@ export const Navbar = () => {
             )}
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };

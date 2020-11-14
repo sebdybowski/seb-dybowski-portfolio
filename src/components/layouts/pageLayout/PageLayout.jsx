@@ -1,28 +1,7 @@
 import React from 'react';
-import Normalize from 'normalize.css';
 import { Footer } from '../footer/Footer';
 import Comfortaa from '../../../fonts/comfortaa/Comfortaa-VariableFont_wght.ttf';
 import { Navbar } from '../../navigation';
-
-const GlobalStyle = `
-  @import ${Normalize};
-
-  @font-face {
-    font-family: 'Comfortaa';
-    src: url(${Comfortaa}) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-  }
-
-  body {
-    font-family: 'Comfortaa', cursive;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 2vh 0;
-    min-height: 100vh;
-  }
-`;
 
 // const PageLayout = `
 //   width: 60vw;
