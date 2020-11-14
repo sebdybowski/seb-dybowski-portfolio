@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.scss';
 import clsx from 'clsx';
 import { Link } from 'gatsby';
@@ -8,26 +8,28 @@ import { NAVIGATION_LINKS } from './constants';
 
 export const Navbar = () => {
   const [isOpen, toggle] = useState(false);
-  const [scrollHeight, setScrollHeight] = useState(0);
+  const [scrolledHeight, setScrollHeight] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight * 0.5);
 
-  window.onscroll = function () {
-    setScrollHeight(window.scrollY);
-  };
-  window.onresize = function () {
-    setViewportHeight(window.innerHeight * 0.5);
-  };
+  const isScreenScrolled = scrolledHeight >= viewportHeight;
 
-  console.log(scrollHeight, window.innerHeight);
+  useEffect(() => {
+    window.onscroll = () => {
+      setScrollHeight(window.scrollY);
+    };
+  }, [scrolledHeight]);
 
-  const isScreenScrolled = scrollHeight >= viewportHeight;
+  useEffect(() => {
+    window.onresize = () => {
+      setViewportHeight(window.innerHeight * 0.5);
+    };
+  }, [viewportHeight]);
 
   return (
     <nav
       className={clsx(
         'navbar',
         'is-size-3',
-        !isScreenScrolled && 'is-transparent',
         !isScreenScrolled && 'is-transparent',
         isScreenScrolled && 'is-fixed-top',
         isScreenScrolled && 'is-blur',
@@ -56,6 +58,7 @@ export const Navbar = () => {
           className={clsx(
             'navbar-menu',
             isOpen && 'is-active',
+            isOpen && 'animate__animated animate__fadeIn',
           )}
         >
           <div className="navbar-end">

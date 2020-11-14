@@ -5,7 +5,7 @@
   }
 
   &.is-blur {
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
+    background-color: transparent;
+    backdrop-filter: blur(0.5rem);
   }
 }
