@@ -1,7 +1,7 @@
 import React from 'react';
 import { object, string } from 'yup';
 import { Formik, Form } from 'formik';
-import { isEmpty } from 'ramda';
+import { isEmpty } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { SectionLayout } from '../../components/layouts';

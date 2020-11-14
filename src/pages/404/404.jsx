@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SEO from '../components/_examples/seo';
-import { PageLayout } from '../components';
-import { MainHeading } from '../components/typography';
+import SEO from '../../components/_examples/seo';
+import { PageLayout } from '../../components';
+import { MainHeading } from '../../components/typography';
 
 const NotFoundPage = () => (
   <PageLayout>

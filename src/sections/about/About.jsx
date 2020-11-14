@@ -8,8 +8,8 @@ export const About = () => (
     <div style={{
       display: 'flex-inline',
       boxSizing: 'border-box',
-      border: `6px solid ${TEXT.LIGHT}`,
-      borderRadius: SPACING.LG,
+      // border: `6px solid ${TEXT.LIGHT}`,
+      // borderRadius: SPACING.LG,
       width: '100%',
       padding: '48px 64px',
       height: '512px',
@@ -25,7 +25,7 @@ export const About = () => (
         marginLeft: 'auto',
         position: 'absolute',
         bottom: '0',
-        right: SPACING.MD,
+        // right: SPACING.MD,
       }}
       >
         <Portrait />

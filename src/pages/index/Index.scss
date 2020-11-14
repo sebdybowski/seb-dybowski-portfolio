@@ -1,0 +1,8 @@
+@import "../../../node_modules/normalize.css/normalize.css";
+@import "../../../src/styles/bulma-variables";
+@import "../../../node_modules/bulma/bulma";
+@import "../../../src/styles/variables";
+
+body {
+  background-color: $background-light;
+}

@@ -1,61 +1,35 @@
 import React, { useState } from 'react';
+import './Navbar.scss';
+import clsx from 'clsx';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NAVIGATION_LINKS } from './constants';
 
-// const Link = `
-//   padding: ${SPACING.MD};
-//   color: ${TEXT.DARK};
-//   text-decoration: none;
-//   :hover {
-//     cursor: pointer;
-//     color: ${TEXT.LIGHT};
-//   }
-//   :last-child {
-//     padding-right: 0;
-//   }
-// `;
-
-// const Navbar = nav`
-//   display: flex;
-//   margin-left: auto;
-//   @media only screen and (max-width: 1600px) {
-//     visibility:  ${(props) => (props.isOpen ? 'visible' : 'hidden')};
-//     background: rgba(0, 0, 0, 0.9);
-//     z-index: 1024;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// `;
-
-const Button = `
-  display: none;
-  @media only screen and (max-width: 1600px) {
-    display: flex;
-    margin-left: auto;
-  }
-`;
-
-const Logo = `
-  padding: ${SPACING.MD} 0;
-`;
-
-const Brand = `
-  color: ${BRAND};
-`;
-
 export const Navbar = () => {
   const [isOpen, toggle] = useState(false);
+  const [scrollHeight, setScrollHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight * 0.5);
+
+  window.onscroll = function () {
+    setScrollHeight(window.scrollY);
+  };
+  window.onresize = function () {
+    setViewportHeight(window.innerHeight * 0.5);
+  };
+
+  console.log(scrollHeight, window.innerHeight);
+
   return (
-    <>
-      <nav className="navbar is-transparent is-size-3">
+    <div className="container">
+      <nav
+        className={clsx(
+          'navbar',
+          'is-transparent',
+          'is-size-3',
+          scrollHeight >= viewportHeight && 'is-fixed-top',
+        )}
+      >
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <span>
@@ -63,11 +37,22 @@ export const Navbar = () => {
               dybowski.com
             </span>
           </Link>
-          <div className="navbar-burger burger py-5" data-target="navbarExampleTransparentExample">
+          <button
+            type="button"
+            className="navbar-burger burger"
+            data-target="navbarExampleTransparentExample"
+            onClick={() => toggle(!isOpen)}
+          >
             <FontAwesomeIcon icon={faBars} />
-          </div>
+          </button>
         </div>
-        <div id="navbarExampleTransparentExample" className="navbar-menu">
+        <div
+          id="navbarExampleTransparentExample"
+          className={clsx(
+            'navbar-menu',
+            isOpen && 'is-active',
+          )}
+        >
           <div className="navbar-end">
             { NAVIGATION_LINKS.map(
               ({ ORDER, PATH, LABEL }) => <Link key={ORDER} to={PATH} className="navbar-item">{LABEL}</Link>,
@@ -75,6 +60,6 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };

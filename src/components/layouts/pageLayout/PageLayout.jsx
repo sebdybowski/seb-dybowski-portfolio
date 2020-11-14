@@ -16,8 +16,6 @@ const GlobalStyle = `
   }
 
   body {
-    background-color: ${BACKGROUND.DARK};
-    color: ${TEXT.LIGHT};
     font-family: 'Comfortaa', cursive;
     font-size: 1rem;
     font-weight: 400;
